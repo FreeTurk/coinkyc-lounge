@@ -25,7 +25,7 @@ export default function Home() {
       <div className={'z-40 h-full w-full lg:w-[400px] bg-slate-200 absolute xl:relative drop-shadow-xl transition-all ease-in-out duration-300 ' + isMenu}>
         <div className='flex flex-col justify-center'>
           <div className='w-full px-12 h-fit'>
-            <Image src="/logo.png" width="60%" height="40%" layout='responsive' objectFit='contain'></Image>
+            <Image src="/logo.png" alt="Logo" width="60%" height="40%" layout='responsive' objectFit='contain'></Image>
           </div>
           <div className='flex flex-col justify-items px-4 pt-8 gap-8'>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
