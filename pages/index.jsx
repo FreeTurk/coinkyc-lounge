@@ -52,7 +52,7 @@ export default function Home() {
       <div id='right' className='pl-[400px] xl:pl-[400px] m-16 overflow-y-scroll w-fit grow flex flex-wrap justify-center'>
         {
           data.filter(x => x.title.toLowerCase().includes(query.toLowerCase())).map((elementInArray) => (
-              <Entry title={elementInArray.title}/>
+              <Entry />
             ) 
           )
         }
