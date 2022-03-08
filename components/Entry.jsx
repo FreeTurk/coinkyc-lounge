@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-export default function Entry() {
+export default function Entry({ title }) {
     const [isExp, setExp] = useState(true)
     return (
         <div className={(isExp ? "w-[400px] h-[400px]" : "w-info h-info -order-1") + ' flex m-16 bg-slate-200 rounded-2xl border-blue-300 border-2 drop-shadow-2xl transition-all ease-in-out duration-500'} onClick={() => {setExp(!isExp);document.getElementById("right").scrollTop;}
@@ -11,7 +11,7 @@ export default function Entry() {
                 <div className='transition-all flex flex-row justify-between h-fit w-full items-center'>
                     <Image src="/favicon.ico" alt="Logo" width={isExp ? 80 : 120} height={isExp ? 80 : 120} className="transition-all"/>
                     <div className={(isExp ? "text-xl flex-col" : "flex-row justify-center gap-8") + ' flex  grow items-center'}>
-                    <div className={(isExp ? "text-xl" : "text-5xl h-5/6 text-scroll") + " transition-allw-fit font-bold"}></div>
+                    <div className={(isExp ? "text-xl" : "text-5xl h-5/6 text-scroll") + " transition-allw-fit font-bold"}>{title}</div>
                     <div className={(isExp ? "text-md" : "text-2xl") + ' flex flex-row gap-4 justify-center'}><p className='bg-green-300 p-2 rounded-xl font-bold'>KYC</p>
                     <p className='bg-pink-300 p-2 rounded-xl font-bold'>SAFE</p></div>
                     </div>
