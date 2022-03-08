@@ -4,7 +4,7 @@ import { useState } from 'react'
 export default function Entry({ title }) {
     const [isExp, setExp] = useState(true)
     return (
-        <div className={(isExp ? "w-[400px] h-[400px]" : "w-info h-info -order-1") + ' flex m-16 bg-slate-200 rounded-2xl border-blue-300 border-2 drop-shadow-2xl transition-all ease-in-out duration-500'} onClick={() => {setExp(!isExp);document.getElementById("right").scrollTop;}
+        <div className={(isExp ? "w-[320px] h-[320px] cursor-pointer" : "w-auto h-infow mt-0 absolute z-30") + ' flex m-16 bg-slate-200 rounded-2xl border-blue-300 border-2 drop-shadow-2xl transition-all ease-in-out duration-500'} onClick={() => {setExp(!isExp);document.getElementById("right").scrollTop;}
         }>
             <div className='p-8 w-full'>
                 
@@ -16,7 +16,7 @@ export default function Entry({ title }) {
                     <p className='bg-pink-300 p-2 rounded-xl font-bold'>SAFE</p></div>
                     </div>
                 </div>
-                <div className={(isExp ? "h-64 pt-8" : "h-5/6 text-scroll pt-8") + " transition-all"}>
+                <div className={(isExp ? "h-44 pt-8" : "h-5/6 text-scroll pt-8") + " transition-all"}>
                     <p className={(isExp ? "text-xl" : "text-3xl overflow-y-scroll") + ' h-full text-ellipsis overflow-hidden transition-all'}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras arcu mauris, pellentesque eget mi id, ullamcorper lobortis nisi. Proin vitae urna vitae metus tristique tempus. Duis scelerisque, ex id pulvinar tincidunt, eros magna aliquam lectus, nec porttitor mauris nulla sed lorem. In ac libero ullamcorper, hendrerit risus eu, viverra dui. Curabitur convallis luctus massa sed semper. Mauris ipsum felis, rutrum eu sodales sit amet, tincidunt mollis purus. Pellentesque lacus mauris, venenatis vehicula ultrices quis, sollicitudin ac ex.
 
