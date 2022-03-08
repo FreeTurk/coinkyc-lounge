@@ -31,7 +31,7 @@ export default function Home() {
             setQuery(event.target.name.value);
         }
 } className='flex h-8'>
-          <input className='grow p-2' id="name" type="text" placeholder='Search by Name' autocomplete="name" />
+          <input className='grow p-2' id="name" type="text" placeholder='Search by Name' autoComplete="name" />
           <button className='w-8' type="submit"><FontAwesomeIcon icon={faSearch} className="text-center" /></button>
           </form>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
