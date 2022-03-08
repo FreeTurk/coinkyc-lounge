@@ -12,7 +12,8 @@ const data = require('../public/data.json');
 
 export default function Home() {
   const [query, setQuery] = useState("")
-  const [isMenu, setMenu] = useState(isMobile ? true : false)
+  const [isMenu, setMenu] = useState(isMobile ? false : true)
+  
   console.log(data)
   return (
     <div className="p-0 h-full w-full flex flex-row">
@@ -20,8 +21,8 @@ export default function Home() {
     setMenu(!isMenu)
     console.log(isMenu)
   }}/>
-      <div className={(isMenu ? "w-0" : "w-full lg:w-80") + ' z-40 h-full bg-slate-200 absolute drop-shadow-xl transition-all '}>
-        <div className={(isMenu ? "hidden" : "block") + ' flex flex-col justify-center'}>
+      <div className={(isMenu ? "w-full lg:w-80" : "w-0") + ' z-40 h-full bg-slate-200 absolute drop-shadow-xl transition-all '}>
+        <div className={(isMenu ? "block" : "hidden") + ' flex flex-col justify-center'}>
           <div className='w-full px-12 h-fit'>
             <Image src="/logo.png" alt="Logo" width="60%" height="40%" layout='responsive' objectFit='contain'></Image>
           </div>
@@ -49,10 +50,10 @@ export default function Home() {
         </div>
       </div>
       </div>
-      <div id='right' className={(isMenu ? 'w-full pl-0' : 'w-info xl:pl-80') + ' m-16 overflow-y-scroll flex flex-wrap justify-center'}>
+      <div id='right' className={(isMenu ? 'w-info xl:pl-80' : 'w-full pl-0') + '  overflow-y-scroll flex flex-wrap justify-center'}>
         {
           data.filter(x => x.title.toLowerCase().includes(query.toLowerCase())).map((elementInArray, index) => (
-              <Entry title={elementInArray.title} image={elementInArray.image} article={elementInArray.article}/>
+              <Entry title={elementInArray.title} image={elementInArray.image} article={elementInArray.article} menu={isMenu}/>
             ) 
           )
         }
