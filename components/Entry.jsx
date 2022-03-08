@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-export default function Entry({title}) {
+export default function Entry() {
     const [isExp, setExp] = useState(true)
     return (
         <div className={(isExp ? "w-[400px] h-[400px]" : "w-info h-info -order-1") + ' flex m-16 bg-slate-200 rounded-2xl border-blue-300 border-2 drop-shadow-2xl transition-all ease-in-out duration-500'} onClick={() => {setExp(!isExp);document.getElementById("right").scrollTop;}
