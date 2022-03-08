@@ -1,27 +1,27 @@
 [   
     {
         "title": "Binance",
-        "image": "bnb.png",
+        "image": "/favicon.ico",
         "article": "BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!"
     },
     {
         "title": "Binance USD",
-        "image": "busd.png",
+        "image": "/favicon.ico",
         "article": "BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!"
     },
      {
         "title": "Bitcoin",
-        "image": "btc.png",
+        "image": "/favicon.ico",
         "article": "BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!"
     },
     {
         "title": "Bitcoin Cash",
-        "image": "btb.png",
+        "image": "/favicon.ico",
         "article": "BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!"
     },
     {
         "title": "CAKE",
-        "image": "cake.png",
+        "image": "/favicon.ico",
         "article": "BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!"
     }
 ]

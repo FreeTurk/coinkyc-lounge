@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
-        'infow': 'calc(100% - 8rem)'
+        'infow': 'calc(100% - 28rem)',
+        'infoh': 'calc(100% - 8rem)'
       }
     },
   },

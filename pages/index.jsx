@@ -20,7 +20,7 @@ export default function Home() {
     setMenu(!isMenu)
     console.log(isMenu)
   }}/>
-      <div className={(isMenu ? "w-0" : "w-full lg:w-[400px]") + ' z-40 h-full bg-slate-200 absolute drop-shadow-xl transition-all '}>
+      <div className={(isMenu ? "w-0" : "w-full lg:w-80") + ' z-40 h-full bg-slate-200 absolute drop-shadow-xl transition-all '}>
         <div className={(isMenu ? "hidden" : "block") + ' flex flex-col justify-center'}>
           <div className='w-full px-12 h-fit'>
             <Image src="/logo.png" alt="Logo" width="60%" height="40%" layout='responsive' objectFit='contain'></Image>
@@ -49,10 +49,10 @@ export default function Home() {
         </div>
       </div>
       </div>
-      <div id='right' className='pl-[400px] xl:pl-[400px] m-16 overflow-y-scroll w-fit grow flex flex-wrap justify-center'>
+      <div id='right' className={(isMenu ? 'w-full pl-0' : 'w-info xl:pl-80') + ' m-16 overflow-y-scroll flex flex-wrap justify-center'}>
         {
           data.filter(x => x.title.toLowerCase().includes(query.toLowerCase())).map((elementInArray, index) => (
-              <Entry title={elementInArray.title}/>
+              <Entry title={elementInArray.title} image={elementInArray.image} article={elementInArray.article}/>
             ) 
           )
         }
