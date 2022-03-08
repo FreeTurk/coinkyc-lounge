@@ -4,7 +4,6 @@ import { isMobile } from 'react-device-detect'
 
 export default function Entry({ title, image, article, menu }) {
     const [isExp, setExp] = useState(true)
-    console.log(menu)
     return (
         <div className={(isExp ? "w-[320px] h-[320px] cursor-pointer" : menu ? "h-infoh w-5/6 xl:w-3/4 mt-16 absolute z-30" : "h-infoh w-5/6 xl:w-[90%] mx-16 mt-16 absolute z-30") + ' flex m-16 bg-slate-200 rounded-2xl border-blue-300 border-2 drop-shadow-2xl transition-all ease-in-out duration-500'} onClick={() => {setExp(!isExp);document.getElementById("right").scrollTop;}
         }>
