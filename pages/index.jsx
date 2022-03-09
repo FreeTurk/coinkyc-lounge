@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Entry from '../components/Entry'
-import { useState } from 'react'
 import { isMobile } from 'react-device-detect'
+import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
@@ -12,7 +12,13 @@ const data = require('../public/data.json');
 
 export default function Home() {
   const [query, setQuery] = useState("")
-  const [isMenu, setMenu] = useState(isMobile ? false : true)
+  const [isMenu, setMenu] = useState()
+  useEffect(() => {
+  setMenu(!isMobile)
+  }
+  )
+  console.log(isMenu)
+  console.log(isMobile)
   
   console.log(data)
   return (
@@ -50,7 +56,7 @@ export default function Home() {
         </div>
       </div>
       </div>
-      <div id='right' className={(isMenu ? 'w-info grow xl:pl-80' : 'w-full pl-0') + ' bg-[url(/bg.png)] bg-right bg-no-repeat overflow-y-scroll flex flex-wrap justify-center'}>
+      <div id='right' className={(isMenu ? 'w-info grow xl:pl-80' : 'w-full pl-0') + ' gap-x-12 bg-[url(/bg.png)] bg-right bg-no-repeat overflow-y-scroll flex flex-wrap justify-center lg:content-center content-between'}>
         {
           data.filter(x => x.title.toLowerCase().includes(query.toLowerCase())).map((elementInArray, index) => (
               <Entry title={elementInArray.title} image={elementInArray.image} article={elementInArray.article} menu={isMenu} kyc={elementInArray.kyc} white={elementInArray.whitepaper}/>
