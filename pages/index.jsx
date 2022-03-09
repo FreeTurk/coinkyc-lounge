@@ -50,7 +50,7 @@ export default function Home() {
         </div>
       </div>
       </div>
-      <div id='right' className={(isMenu ? 'w-info xl:pl-80' : 'w-full pl-0') + ' bg-[url(/bg.png)] bg-right bg-no-repeat overflow-y-scroll flex flex-wrap justify-center'}>
+      <div id='right' className={(isMenu ? 'w-info grow xl:pl-80' : 'w-full pl-0') + ' bg-[url(/bg.png)] bg-right bg-no-repeat overflow-y-scroll flex flex-wrap justify-center'}>
         {
           data.filter(x => x.title.toLowerCase().includes(query.toLowerCase())).map((elementInArray, index) => (
               <Entry title={elementInArray.title} image={elementInArray.image} article={elementInArray.article} menu={isMenu} kyc={elementInArray.kyc} white={elementInArray.whitepaper}/>
