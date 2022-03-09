@@ -2,26 +2,36 @@
     {
         "title": "Binance",
         "image": "/favicon.ico",
-        "article": "BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!"
+        "article": "BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!",
+        "kyc": "/kyc.png",
+        "whitepaper": "/whitepaper.pdf"
     },
     {
         "title": "Binance USD",
         "image": "/favicon.ico",
-        "article": "BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!"
+        "article": "BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!",
+        "kyc": "/kyc.png",
+        "whitepaper": "/whitepaper.pdf"
     },
      {
         "title": "Bitcoin",
         "image": "/favicon.ico",
-        "article": "BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!"
+        "article": "BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!",
+        "kyc": "/kyc.png",
+        "whitepaper": "/whitepaper.pdf"
     },
     {
         "title": "Bitcoin Cash",
         "image": "/favicon.ico",
-        "article": "BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!"
+        "article": "BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!",
+        "kyc": "/kyc.png",
+        "whitepaper": "/whitepaper.pdf"
     },
     {
         "title": "CAKE",
         "image": "/favicon.ico",
-        "article": "BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!"
+        "article": "BUY THIS COOL TOKEN RIGHT THIS INSTANT!!!",
+        "kyc": "/kyc.png",
+        "whitepaper": "/whitepaper.pdf"
     }
 ]
