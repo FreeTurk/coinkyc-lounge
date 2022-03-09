@@ -12,7 +12,7 @@ export default function Entry({ title, image, article, kyc, white, menu }) {
     }>
             <div className='p-8 w-full overflow-hidden mb-8'>
                 
-                <div className={(isExp ? "text-xl sm:flex-row sm:gap-0 gap-4 flex-col" : "flex-col md:flex-row justify-center gap-8") + ' transition-all flex flex-row justify-between h-fit w-full items-center'}>
+                <div className={(isExp ? "text-xl flex-row sm:gap-0 gap-4" : "flex-col md:flex-row justify-center gap-8") + ' transition-all flex flex-row justify-between h-fit w-full items-center'}>
                     <Image src={image} alt="Logo" width={isExp ? 80 : 120} height={isExp ? 80 : 120} className="transition-all"/>
                     <div className={(isExp ? "text-xl flex-col" : "sm:flex-row flex-col justify-center sm:gap-8 gap-4") + ' flex  grow items-center'}>
                     <div className={(isExp ? "text-xl" : "text-5xl h-5/6 text-scroll") + " transition-allw-fit font-bold"}>{title}</div>
