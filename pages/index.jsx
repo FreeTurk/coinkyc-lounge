@@ -42,16 +42,16 @@ export default function Home() {
           <button className='w-8' type="submit"><FontAwesomeIcon icon={faSearch} className="text-center" /></button>
           </form>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Investor Lounge
+          Lorem ipsum dolor
         </button>
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Paid Endorsment
+        Lorem ipsum dolor
         </button>
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Something
+        Lorem ipsum dolor
         </button>
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Another something
+        Lorem ipsum dolor
         </button>
         </div>
       </div>
