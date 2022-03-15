@@ -1,43 +1,45 @@
-import Image from 'next/image'
-import { useState } from 'react'
-import { isMobile } from 'react-device-detect'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowCircleRight, faShield, faLock } from '@fortawesome/free-solid-svg-icons'
-import Link from 'next/link'
+import Image from "next/image";
+import { useState } from "react";
+import { isMobile } from "react-device-detect";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowCircleRight,
+  faShield,
+  faLock,
+} from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
-
-export default function Entry({title, image, article, kyc, white, menu}) {
-    const [isExp, setExp] = useState(true)
-    return (
-        <div className={(isExp ? "w-[320px] h-[320px] my-16 cursor-pointer" : menu ? "h-infoh w-5/6 xl:w-3/4 mt-16 absolute z-30" : "h-infoh w-5/6 xl:w-[90%] mx-16 mt-16 absolute z-30") + ' flex bg-slate-200 rounded-2xl border-blue-300 border-2 drop-shadow-2xl transition-all ease-in-out duration-700'} onClick={() => {setExp(!isExp);}
-    }>
-            <div className={(isExp ? 'overflow-hidden' :  'overflow-y-scroll' ) + ' p-8 w-full overflow-hidden mb-8 scrollbar-none'}>
-                
-                <div className={(isExp ? "text-xl flex-row sm:gap-0 gap-4" : "flex-col md:flex-row justify-center gap-8") + ' transition-all flex flex-row justify-between h-fit w-full items-center'}>
-                    <Image src={image} alt="Logo" width={isExp ? 80 : 120} height={isExp ? 80 : 120} className="transition-all"/>
-                    <div className={(isExp ? "text-xl flex-col" : "sm:flex-row flex-col justify-center sm:gap-8 gap-4") + ' flex  grow items-center'}>
-                    <div className={(isExp ? "text-2xl" : "text-5xl h-5/6 text-scroll") + " transition-allw-fit font-bold"}>{title}</div>
-                    <div className={(isExp ? "text-md" : "text-2xl") + ' flex flex-row gap-2 justify-center'}><p className='bg-green-300 p-2 rounded-xl font-bold text-[1rem]'><FontAwesomeIcon icon={faShield} /> KYC</p>
-                    <p className='bg-pink-300 p-2 rounded-xl font-bold text-[1rem]'><FontAwesomeIcon icon={faLock} /> SAFE</p></div>
-                    </div>
-                </div>
-                <div className={(isExp ? "sm:h-44 h-24 pt-8" : " grow-1 text-scroll z-50 pt-8 h-full") + " transition-all flex flex-col lg:flex-row gap-8"}>
-                    <p className={(isExp ? "text-xl hidden" : "text-3xl flex order-2") + ' h-fit text-ellipsis transition-all'}>
-                    {article}
-                    </p>
-                    <div className={(isExp ? '' : 'order-1 flex-col')+' flex justify-center items-center gap-4 h-fit'}>
-                    <div className={(isExp ? 'w-40' : 'w-90')+' transition-all duration-700'}>
-                    <Image src={kyc} alt="Logo" width={300} height={225} className="transition-all"/>
-                    </div>
-                    <Link href={white} className={(isExp ? "block" : "hidden") + ' bg-slate-400 p-4 rounded-xl w-20 h-20 z-50'}>
-                        <div className={(isExp ? '' : 'order-1 flex-col w-48 lg:w-64')+" bg-slate-400 mr-4 p-4 rounded-xl w-20 h-20 text-white"}>
-                        <FontAwesomeIcon icon={faArrowCircleRight}/>
-                        <p className='font-black'>Docs</p>
-                        </div>
-                    </Link>
-                    </div>
-                </div>
+export default function Entry({ title, image, article, kyc, white }) {
+  return (
+    <div className="group flex shadow-xl w-full hover:h-80 transition-all duration-500 h-14 bg-slate-400 shadow-2xl border-4 rounded-xl border-slate-500">
+      <div className="h-full grow flex flex-col justify-center items-center transition-all duration-500 align-center">
+        <div className="flex flex-row h-2/4 items-center px-4 w-full">
+          <div className="group-hover:w-32 group-hover:h-32 w-10 h-10 transition-all duration-700 ease-in-out">
+            <Image src={image} width={1000} height={1000} />
+          </div>
+          <div className="text-ellipsis overflow-ellipsis w-20 font-black group-hover:ml-8 mx-4 transition-all duration-700 ease-in-out text-xl leading-5 group-hover:leading-7">
+            {title}
+          </div>
+          <div className="mx-4 flex-row flex gap-4 transition-all duration-700 ease-in-out">
+            <div className="rounded-md text-xl font-bold bg-green-300 p-1 group-hover:p-3 text-green-900 shadow-lg hover:shadow-green-300/50 transition-all duration-700 ease-in-out">
+              KYC
             </div>
+            <div className="rounded-md text-xl font-bold bg-red-300 p-1 group-hover:p-3 text-red-900 shadow-lg hover:shadow-red-300/50 transition-all duration-700 ease-in-out">
+              AUDIT
+            </div>
+          </div>
         </div>
-    )
+        <div className="group-hover:block hidden flex h-1/4 justify-center align-center w-60 transition-all duration-500">
+          <Link href="https://google.com" className="p-4">
+            <div className="rounded-lg font-bold text-2xl h-16 flex flex-col text-center cursor-pointer bg-slate-500 transition-all duration-500 align-center justify-center">
+              Learn More
+            </div>
+          </Link>
+        </div>
+      </div>
+      <div className="grow m-3 group-hover:m-8 text-ellipsis overflow-hidden">
+        {article}
+      </div>
+    </div>
+  );
 }

@@ -13,8 +13,13 @@ const data = require('../public/data.json');
 export default function Home() {
   const [query, setQuery] = useState("")
   const [isMenu, setMenu] = useState()
+  const [isInit, setInit] = useState(false)
   useEffect(() => {
-  setMenu(!isMobile)
+    if (!isInit) {
+    setMenu(!isMobile)
+    setInit(true)
+    } else if (isInit) {
+    }
   }
   )
   console.log(isMenu)
@@ -56,14 +61,15 @@ export default function Home() {
         </div>
       </div>
       </div>
-      <div id='right' className={(isMenu ? 'w-info grow xl:pl-80' : 'w-full pl-0') + ' gap-x-12 bg-[url(/bg.png)] bg-right bg-no-repeat overflow-y-scroll flex flex-wrap justify-center lg:content-center content-between'}>
+      <div id='right' className={(isMenu ? 'w-info grow xl:pl-80' : 'w-full pl-0') + ' bg-[url(/bg.png)] bg-right bg-no-repeat overflow-y-scroll flex flex-col flex-wrap justify-center lg:content-center content-between'}>
+        <div className='w-3/4 h-fit flex flex-col gap-3'>
         {
           data.filter(x => x.title.toLowerCase().includes(query.toLowerCase())).map((elementInArray, index) => (
-              <Entry title={elementInArray.title} image={elementInArray.image} article={elementInArray.article} menu={isMenu} kyc={elementInArray.kyc} white={elementInArray.whitepaper}/>
+              <Entry title={elementInArray.title} image={elementInArray.image} article={elementInArray.article} kyc={elementInArray.kyc} white={elementInArray.whitepaper}/>
             ) 
           )
         }
-
+      </div>
       </div>
     </div>
   )
