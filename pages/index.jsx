@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Entry from '../components/Entry'
+import Sidebar from '../components/Sidebar'
 import { isMobile } from 'react-device-detect'
 import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
