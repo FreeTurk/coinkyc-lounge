@@ -30,8 +30,9 @@ export default function Entry({ title, image, article, kyc, white }) {
           </div>
         </div>
         <div className="group-hover:block hidden flex h-1/4 justify-center align-center w-60 transition-all duration-500">
-          <Link href="https://google.com" className="p-4">
-            <div className="rounded-lg font-bold text-2xl h-16 flex flex-col text-center cursor-pointer bg-slate-500 transition-all duration-500 align-center justify-center">
+          <Link href={{ pathname: '/page', query: { title: title } }} className="p-4">
+            <div className="rounded-lg font-bold text-2xl h-16 flex flex-col text-center cursor-pointer bg-slate-500 transition-all duration-500 align-center hover:scale-110
+            hover:shadow-slate-400 shadow-md justify-center">
               Learn More
             </div>
           </Link>
