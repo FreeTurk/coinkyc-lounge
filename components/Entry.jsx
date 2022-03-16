@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function Entry({ title, image, article, kyc, white }) {
   return (
-    <div className="group flex shadow-xl w-full hover:h-80 transition-all duration-500 h-14 bg-slate-400 shadow-2xl border-4 rounded-xl border-slate-500">
+    <div className="group flex shadow-md shadow-slate-600 w-full hover:h-80 transition-all duration-500 h-14 bg-slate-400 rounded-xl">
       <div className="h-full grow flex flex-col justify-center items-center transition-all duration-500 align-center">
         <div className="flex flex-row h-2/4 items-center px-4 w-full">
           <div className="group-hover:w-32 group-hover:h-32 w-10 h-10 transition-all duration-700 ease-in-out">
@@ -30,9 +30,14 @@ export default function Entry({ title, image, article, kyc, white }) {
           </div>
         </div>
         <div className="group-hover:block hidden flex h-1/4 justify-center align-center w-60 transition-all duration-500">
-          <Link href={{ pathname: '/page', query: { title: title } }} className="p-4">
-            <div className="rounded-lg font-bold text-2xl h-16 flex flex-col text-center cursor-pointer bg-slate-500 transition-all duration-500 align-center hover:scale-110
-            hover:shadow-slate-400 shadow-md justify-center">
+          <Link
+            href={{ pathname: "/page", query: { title: title } }}
+            className="p-4"
+          >
+            <div
+              className="rounded-lg font-bold text-2xl h-16 flex flex-col text-center cursor-pointer bg-slate-500 transition-all duration-500 align-center hover:scale-110
+            hover:shadow-slate-400 shadow-md justify-center"
+            >
               Learn More
             </div>
           </Link>
