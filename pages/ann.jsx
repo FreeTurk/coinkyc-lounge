@@ -11,11 +11,6 @@ import Link from "next/link";
 
 const data = require("../public/anns.json");
 
-data
-            .map((elementInArray, index) => (
-              console.log(elementInArray.date)
-            ))
-
 export default function Home() {
   const [query, setQuery] = useState("");
   const [isMenu, setMenu] = useState();
