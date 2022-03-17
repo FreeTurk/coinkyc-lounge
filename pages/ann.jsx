@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import Entry from "../components/Entry";
+import Announcement from "../components/Announcement";
 import { isMobile } from "react-device-detect";
 import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
@@ -9,7 +9,12 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
-const data = require("../public/data.json");
+const data = require("../public/anns.json");
+
+data
+            .map((elementInArray, index) => (
+              console.log(elementInArray.date)
+            ))
 
 export default function Home() {
   const [query, setQuery] = useState("");
@@ -81,11 +86,9 @@ export default function Home() {
               Investors' Lounge
             </div>
             </Link>
-            <Link href={"ann"}>
             <div className="cursor-pointer transition-all bg-blue-500 hover:bg-blue-700 text-white text-center font-bold py-2 px-4 rounded">
               Announcments
             </div>
-            </Link>
           </div>
         </div>
       </div>
@@ -100,12 +103,10 @@ export default function Home() {
           {data
             .filter((x) => x.title.toLowerCase().includes(query.toLowerCase()))
             .map((elementInArray, index) => (
-              <Entry
+              <Announcement
                 title={elementInArray.title}
-                image={elementInArray.image}
                 article={elementInArray.article}
-                kyc={elementInArray.kyc}
-                white={elementInArray.whitepaper}
+                date={elementInArray.date}
               />
             ))}
         </div>

@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       spacing: {
         'infow': 'calc(100% - 28rem)',
-        'infoh': 'calc(100% - 8rem)'
+        'infoh': 'calc(100% - 8rem)',
+        '160': '40rem'
       }
     },
   },
