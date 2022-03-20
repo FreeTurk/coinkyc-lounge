@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function Entry({ title, image, article, kyc, white }) {
   return (
-    <div className="group flex shadow-md shadow-slate-600 w-full hover:h-80 transition-all duration-500 h-14 bg-slate-400 rounded-xl">
+    <div className="group flex shadow-md shadow-indigo-400 w-full hover:h-80 transition-all duration-500 h-14 bg-indigo-200 rounded-xl">
       <div className="h-full grow flex flex-col justify-center items-center transition-all duration-500 align-center">
         <div className="flex sm:flex-row sm:group-hover:gap-0 group-hover:gap-6 sm:group-hover:flex-row group-hover:flex-col lg:gap-0 h-2/4 lg:content-hover:justify-start justify-center items-center sm:px-4 w-full">
           <div className="flex items-center">

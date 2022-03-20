@@ -39,7 +39,7 @@ export default function Home() {
       <div
         className={
           (isMenu
-            ? "w-full md:w-72 z-40 h-full bg-slate-200 absolute"
+            ? "w-full md:w-72 z-40 h-full bg-indigo-200 absolute"
             : "w-0") + " drop-shadow-xl transition-all duration-700"
         }
       >

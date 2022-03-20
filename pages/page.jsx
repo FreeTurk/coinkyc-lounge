@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="w-full h-full p-0">
       <div className="bg-[url(/bg.png)] justify-center flex items-center bg-right-bottom w-full h-full bg-no-repeat">
-        <div className="overflow-scroll scrollbar-none w-5/6 h-5/6 bg-slate-400 rounded-2xl shadow-xl flex flex-col">
+        <div className="overflow-scroll scrollbar-none w-5/6 h-5/6 bg-indigo-200 shadow-indigo-200 rounded-2xl shadow-xl flex flex-col">
           <Link href={"/"}>
             <FontAwesomeIcon
               icon={faArrowLeft}
